@@ -1,8 +1,8 @@
 import React from 'react';
 import './card.css';
-import UserIcon from '../UserIcon';
-import MoreIcon from '../../assets/icons_FEtask/three_dot_menu.svg';
-import { getStatusIcon } from '../../utils/helper';
+import UserIcon from '../../UserIcon'; // Adjusted to locate UserIcon in ui-elements
+import MoreIcon from '../../../assets/icons_FEtask/three_dot_menu.svg'; // Corrected path for MoreIcon
+import { getStatusIcon } from '../../../utilities/util'; // Adjusted to import from utilities
 
 function Card({ ticket, userData, hideStatusIcon, hideProfileIcon }) {
   return (
@@ -17,7 +17,7 @@ function Card({ ticket, userData, hideStatusIcon, hideProfileIcon }) {
       </div>
       <div className='bottom-container'>
         <div className='more-icon-container'>
-        <img src={MoreIcon} alt="More options" />
+          <img src={MoreIcon} alt="More options" />
         </div>
         {ticket.tag.map((t) => (
           <div key={t} className='tag-container'>

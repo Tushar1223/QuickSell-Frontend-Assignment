@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import Header from './components/Header';
-import Grid from './components/Grid';
+import Header from './ui-elements/Header';
+import Grid from './ui-elements/kanban-board/Grid';
 import { GET_TICKETS_URL } from './constants';
-import { loadGrid, mapUsersByUserId } from './utils';
-import Loader from './components/Loader';
+import { loadGrid, mapUsersByUserId } from './utilities';
+import Loader from './ui-elements/Loader';
 import './App.css';
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
         setUserData(mapUsersByUserId(users));
       })
       .catch(err => {});
-  }, [loadSettings]); // Added loadSettings as a dependency
+  }, [loadSettings]);
 
   useEffect(() => {
     if (!tickets.length) return;
@@ -45,13 +45,13 @@ function App() {
     setLoading(true);
     setGrouping(value);
     saveSettings({ grouping: value });
-  }, [saveSettings]); // Added saveSettings as a dependency
+  }, [saveSettings]);
 
   const onSetOrdering = useCallback((value) => {
     setLoading(true);
     setOrdering(value);
     saveSettings({ ordering: value });
-  }, [saveSettings]); // Added saveSettings as a dependency
+  }, [saveSettings]);
 
   return (
     <div className="App">

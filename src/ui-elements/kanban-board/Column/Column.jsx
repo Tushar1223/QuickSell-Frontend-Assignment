@@ -2,9 +2,9 @@ import React, { useMemo } from 'react';
 import Card from '../Card';
 import "./column.css";
 import { GrAdd } from 'react-icons/gr';
-import MoreIcon from '../../assets/icons_FEtask/three_dot_menu.svg';
-import { getPriorityIcon, getStatusIcon } from '../../utils/helper';
-import UserIcon from '../UserIcon';
+import MoreIcon from '../../../assets/icons_FEtask/three_dot_menu.svg';
+import { getPriorityIcon, getStatusIcon } from '../../../utilities/util';
+import UserIcon from '../../UserIcon';
 
 function Column({ tickets, grouping, groupBy, userIdToData }) {
 

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import './grid.css';
-import Column from '../Column/Column';
+import Column from '../../kanban-board/Column/Column';
 
 function Grid({ gridData, grouping, userIdToData }) {
     const keys = useMemo(() => Object.keys(gridData), [gridData]);

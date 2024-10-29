@@ -1,3 +1,4 @@
+// Grouping Functions
 export const groupTicketsByStatus = (tickets) => {
     const groups = tickets.reduce((result, ticket) => {
         if (!result[ticket.status]) {
@@ -13,13 +14,7 @@ export const groupTicketsByStatus = (tickets) => {
 export const groupTicketsByPriority = (tickets) => {
     const groups = tickets.reduce((result, ticket) => {
         const priority = getPriorityLabel(ticket.priority);
-/**
- * Group tickets by priority.
- *
- * @param tickets - The tickets to group.
- *
- * @returns A record with the priority names as keys and the tickets as values.
- */
+
         if (!result[priority]) {
             result[priority] = [];
         }
@@ -42,6 +37,7 @@ export const groupTicketsByUserId = (tickets) => {
     return groups;
 };
 
+// Utility Functions
 export const mapUsersByUserId = (users) => {
     let group = users.reduce((accumulator, user) => {
         accumulator[user.id] = user;
@@ -62,9 +58,19 @@ const getPriorityLabel = (priority) => {
     }
 };
 
+// Sorting Functions
 const orderByPriority = (tickets) => tickets.sort((a, b) => (a.priority > b.priority ? -1 : 1));
 const orderByTitle = (tickets) => tickets.sort((a, b) => (a.title < b.title ? -1 : 1));
 
+// Icon Functions (assuming these are defined elsewhere in utilities)
+export const getPriorityIcon = (priority) => {
+    // logic to get the appropriate priority icon
+};
+export const getStatusIcon = (status) => {
+    // logic to get the appropriate status icon
+};
+
+// Main Function
 export const loadGrid = (tickets, grouping, ordering) => {
     let orderedTickets;
     if (ordering === "priority") {

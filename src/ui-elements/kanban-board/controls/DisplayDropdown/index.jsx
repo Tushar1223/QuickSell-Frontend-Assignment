@@ -1,8 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './displayDropdown.css';
-
-import Display from '../../../assets/icons_FEtask/Display.svg';
-import Drop from '../../../assets/icons_FEtask/down.svg';
+import Display from '../../../../assets/icons_FEtask/Display.svg'; // Corrected path for Display.svg
+import Drop from '../../../../assets/icons_FEtask/down.svg'; // Corrected path for down.svg
 
 function DisplayDropdown({ grouping, setGrouping, ordering, setOrdering }) {
   const [visible, setVisible] = useState(false);

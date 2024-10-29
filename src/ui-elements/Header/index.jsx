@@ -1,6 +1,6 @@
 import React from 'react';
 import './header.css';
-import DisplayDropdown from '../Dropdowns/DisplayDropdown';
+import DisplayDropdown from '../kanban-board/controls/DisplayDropdown';
 
 function Header({ grouping, setGrouping, ordering, setOrdering }) {
     return (
