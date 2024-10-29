@@ -1,52 +1,80 @@
-# Getting Started with Create React App
+Kanban Board Application
+This project is a responsive Kanban board application built with React JS. It fetches data from an API to display tickets that can be grouped and sorted based on specific criteria.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+Grouping Options: Organize tickets by status, user, or priority.
+Sorting Options: Sort tickets by priority (descending) or title (ascending).
+Persistent View State: Saves the user’s grouping and sorting preferences across sessions.
+Responsive Design: Optimized layout for both desktop and mobile views.
 
-## Available Scripts
+Project Requirements
+Framework: React JS
+CSS: Pure CSS and Styled JSX (no external CSS libraries)
+Functionality: Matches provided design specifications
+API: https://api.quicksell.co/v1/internal/frontend-assignment
 
-In the project directory, you can run:
+Getting Started
+To run the project locally:
 
-### `yarn start`
+Install dependencies:
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run the development server:
+npm start
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Open http://localhost:3000 in your browser to view the application.
 
-### `yarn test`
+Build for production:
+npm run build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This will generate an optimized build in the build folder, ready for deployment.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Project Structure:-
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-## Preview
-
-![Desktop Screenshot 1](./preview/Desktop-1.png)
-![Desktop Screenshot 2](./preview/Desktop-2.png)
-![Mobile Screenshot 1](./preview/Mobile-1.png)
+src/
+│
+├── assets/
+│   ├── icons_FEtask/                  # Stores all icons and asset images
+│
+├── ui-elements/
+│   ├── Header/
+│   │   ├── header.css                 # Styles for Header component
+│   │   └── index.jsx                  # Header component
+│   │
+│   ├── kanban-board/
+│   │   ├── Card/                      # Folder for Card component
+│   │   │   ├── card.css               # Styles for Card component
+│   │   │   └── index.jsx              # Card component
+│   │   │
+│   │   ├── Column/                    # Folder for Column component
+│   │   │   ├── column.css             # Styles for Column component
+│   │   │   └── Column.jsx             # Column component
+│   │   │
+│   │   ├── controls/                  # Folder for controls like dropdown
+│   │   │   └── DisplayDropdown/
+│   │   │       ├── displayDropdown.css # Styles for DisplayDropdown component
+│   │   │       └── index.jsx          # DisplayDropdown component
+│   │   │
+│   │   └── Grid/                      # Folder for Grid component
+│   │       ├── grid.css               # Styles for Grid component
+│   │       └── index.jsx              # Grid component
+│   │
+│   ├── Loader/
+│   │   ├── loader.css                 # Styles for Loader component
+│   │   └── index.jsx                  # Loader component
+│   │
+│   └── UserIcon/
+│       ├── usericon.css               # Styles for UserIcon component
+│       └── index.jsx                  # UserIcon component
+│
+├── utilities/                         # Folder for utility functions
+│   ├── index.js                       # Main utility export
+│   └── util.jsx                       # Utility functions (e.g., icon handling)
+│
+├── App.css                            # Global app styles
+├── App.js                             # Main App component
+├── App.test.tsx                       # Tests for the App component
+├── constants.js                       # Contains constants such as API endpoints
+├── index.css                          # Global styles
+└── index.js                           # Entry point for ReactDOM
